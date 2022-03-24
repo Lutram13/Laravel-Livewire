@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Simple;
 
 use Livewire\Component;
 
-class Counter extends Component
+class QuickStart extends Component
 {
     public $count = 0;
 
@@ -20,6 +20,6 @@ class Counter extends Component
 
     public function render()
     {
-        return view('livewire.counter');
+        return view('livewire.simple.quick-start');
     }
 }

@@ -30,7 +30,8 @@
     <link href="assets/css/semi-dark.css" rel="stylesheet" />
     <link href="assets/css/header-colors.css" rel="stylesheet" />
 
-    <title>Blackdash - Bootstrap5 Admin Template</title>
+    <title>Livewire - @yield('title')</title>
+    @livewireStyles
 </head>
 
 <body>
@@ -38,12 +39,60 @@
     <!--start wrapper-->
     <div class="wrapper">
 
-        @include('layouts.admin.components.sidebar')
-        @include('layouts.admin.components.header')
+    @include('layouts.admin.components.sidebar')
+    @include('layouts.admin.components.header')
 
-        @yield('contents')
+    <!-- start page content wrapper-->
+    <div class="page-content-wrapper">
+        <!-- start page content-->
+        <div class="page-content">
 
-        @include('layouts.admin.components.footer')
+            <!--start breadcrumb-->
+            <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+                <div class="breadcrumb-title pe-3">@yield('title')</div>
+                <div class="ps-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0 p-0 align-items-center">
+                            {{-- <li class="breadcrumb-item"><a href="javascript:;">
+                                    <ion-icon name="home-outline"></ion-icon>
+                                </a>
+                            </li> --}}
+                            <li class="breadcrumb-item active" aria-current="page">@yield('subtitle')</li>
+                        </ol>
+                    </nav>
+                </div>
+                {{-- <div class="ms-auto">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-dark">Settings</button>
+                        <button type="button"
+                            class="btn btn-outline-dark split-bg-dark dropdown-toggle dropdown-toggle-split"
+                            data-bs-toggle="dropdown"> <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end"> <a
+                                class="dropdown-item" href="javascript:;">Action</a>
+                            <a class="dropdown-item" href="javascript:;">Another action</a>
+                            <a class="dropdown-item" href="javascript:;">Something else here</a>
+                            <div class="dropdown-divider"></div> <a class="dropdown-item"
+                                href="javascript:;">Separated link</a>
+                        </div>
+                    </div>
+                </div> --}}
+            </div>
+            <!--end breadcrumb-->
+
+            @yield('contents')
+
+        </div>
+        <!-- end page content-->
+    </div>
+    <!--end page content wrapper-->
+
+
+
+
+        {{-- @include('layouts.admin.components.footer') --}}
+
+        @livewireScripts
 
         <!--Start Back To Top Button-->
         <a href="javaScript:;" class="back-to-top">

@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\simpleController;
+use App\Http\Controllers\basicController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -20,3 +22,12 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [adminController::class, 'index'])->name('index');
+
+Route::get('/quick-start', [simpleController::class, 'quickStart'])->name('quickStart');
+Route::get('/hello', [simpleController::class, 'hello'])->name('hello');
+Route::get('/hellos', [simpleController::class, 'hellos'])->name('hellos');
+
+Route::get('/student', [basicController::class, 'student'])->name('student');
+
+
+Route::get('/posts', [PostCRUD::class,])->name('posts');
