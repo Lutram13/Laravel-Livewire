@@ -11,6 +11,10 @@ class StudentCreate extends Component
 
     public function addStudent()
     {
+        $this->validate([
+            'name' => 'required',
+        ]);
+
         Student::create(['name' => $this->name]);
 
         $this->emit('studentAdded');
