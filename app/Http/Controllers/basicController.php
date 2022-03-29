@@ -10,4 +10,9 @@ class basicController extends Controller
     {
         return view('pages.admin.basic.student');
     }
+
+    public function customer(Request $request)
+    {
+        return view('pages.admin.basic.customer');
+    }
 }

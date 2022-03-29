@@ -4,6 +4,7 @@ use App\Http\Controllers\adminController;
 use App\Http\Controllers\simpleController;
 use App\Http\Controllers\basicController;
 use Illuminate\Support\Facades\Route;
+// use App\Http\Livewire\Basic\CustomerIndex;
 
 
 /*
@@ -28,6 +29,10 @@ Route::get('/hello', [simpleController::class, 'hello'])->name('hello');
 Route::get('/hellos', [simpleController::class, 'hellos'])->name('hellos');
 
 Route::get('/student', [basicController::class, 'student'])->name('student');
+Route::get('/customer', [basicController::class, 'customer'])->name('customer');
 
 
 Route::get('/posts', [PostCRUD::class,])->name('posts');
+
+
+// Route::get('/customers', CustomerIndex::class);

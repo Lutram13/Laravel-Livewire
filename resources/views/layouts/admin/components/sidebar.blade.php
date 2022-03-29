@@ -65,7 +65,11 @@
             </a>
             <ul>
                 <li> <a href="{{ route('student') }}">
-                        <i class="lni lni-book"></i>CDRUD Students
+                        <i class="lni lni-book"></i>CR Students
+                    </a>
+                </li>
+                <li> <a href="{{ route('customer') }}">
+                        <i class="lni lni-book"></i>CRUD Customers
                     </a>
                 </li>
                 

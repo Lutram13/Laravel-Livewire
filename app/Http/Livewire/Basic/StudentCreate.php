@@ -11,14 +11,18 @@ class StudentCreate extends Component
 
     public function addStudent()
     {
+        //Memvaliasi nama dibutuhkan
         $this->validate([
             'name' => 'required',
         ]);
 
+        //Membuat data nama
         Student::create(['name' => $this->name]);
 
+        //Mengirimkan event ke component induk
         $this->emit('studentAdded');
 
+        //Mendeklarasi nilai name di form input menjadi kosong 
         $this->name = '';
     }
 

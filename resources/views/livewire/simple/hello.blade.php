@@ -5,14 +5,6 @@
         
         </h5>          
     </div>
-    <div class="col">
-        <select wire:model="greeting" class="form-select form-select-sm mb-2">
-            <option>Hello</option>
-            <option>Hai</option>
-            <option>Assalamualaikum</option>
-        </select>
-        <input wire:model="name" class="form-control form-control-sm mb-2" type="text">   
-    </div>
     <div class="form-check">
         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
         <label class="form-check-label" for="flexRadioDefault1">Upper Case</label>

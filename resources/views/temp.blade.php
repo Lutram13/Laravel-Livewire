@@ -8,4 +8,12 @@
 
 
 
+
+
+{{-- <x-slot name="script">
+    <script>
+        
+    </script>
+</x-slot> --}}
+
 @endsection

@@ -6,6 +6,7 @@ use Livewire\Component;
 
 class Hello extends Component
 {
+    //Deklarasi
     public $name = "World";
     public $loud = false;
     public $greeting = "Hello";
